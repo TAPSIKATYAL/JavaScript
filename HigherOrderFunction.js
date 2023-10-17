@@ -33,3 +33,57 @@ console.log(reduceEachValueBy1);
 
 const addEachValueBy2 = arr.map((x) => x+2);
 console.log(addEachValueBy2);
+
+// *******************************  Filter Function  ************************************************
+// Used to filter Values from array
+
+const greaterthan4 = arr.filter((x) => x>4 );
+console.log(greaterthan4);
+
+// *******************************  Reduce Function  ************************************************
+
+//Find Sum
+//Non Functional Programming 
+
+function findSum(arr){
+    let sum = 0 ;
+    for(let i = 0; i<arr.length; i++ ){
+        sum = sum + arr[i];
+    }
+    return sum;
+}
+console.log(findSum(arr));
+
+//Functional Programming Way
+
+const findSumByFP = arr.reduce(function(acc, curr) 
+{
+    acc =  acc + curr
+    return acc;
+
+},0); 
+// 0 is default value of acc similar to sum = 0
+console.log(findSumByFP);
+
+
+//Find Max element in array
+
+function findMax (arr){
+    let max = 0 ;
+    for(let i = 0; i<arr.length; i++ ){
+        if(arr[i] > max){
+            max = arr[i];
+        }
+    }
+    return max;
+}
+console.log(findMax(arr));
+
+const findMaxByFilter = arr.reduce(function(acc,curr){
+    if(curr > acc){
+        acc = curr;
+    }
+    return acc;
+},0);
+
+console.log(findMaxByFilter);
