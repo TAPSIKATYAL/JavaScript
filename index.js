@@ -28,7 +28,7 @@ const calculateCircumference= function (radius){
     return output;
 }
 
-const calculateCircle = function(radius, logic){
+Array.prototype.calculateCircle = function(radius, logic){
     let output = [];
     for(let i=0;i<radius.length;i++){
         output[i] = logic(radius[i]);
@@ -39,9 +39,11 @@ const calculateCircle = function(radius, logic){
 console.log(calculateDiameter(radius));
 console.log(calculateArea(radius));
 console.log(calculateCircumference(radius));
-console.log(calculateCircle(radius,area));
-console.log(calculateCircle(radius,diameter));
+console.log(radius.calculateCircle(radius,area));
+console.log(radius.calculateCircle(radius,diameter));
 
+
+console.log("AREA by MAP IS" + radius.map(area));
 
 // calculate Circle is Higher Order function and area, diamete is callback function
 
