@@ -148,3 +148,7 @@ console.log(flattenedArray)
 
 const positiveNumber = x.find((ele,i)=> ele>0);
 console.log(positiveNumber)
+
+var nums = [2,7,11,15], target = 9
+
+console.log(twoSum);
